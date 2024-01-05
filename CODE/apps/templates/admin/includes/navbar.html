@@ -1,0 +1,63 @@
+<aside class="menu-sidebar d-none d-lg-block">
+	<div class="logo">
+		<a href="#">
+			<img src="{{ url_for('static', filename='images/logo_bright.png') }}" alt="Cool Admin" / style="width: 140px;">
+		</a>
+	</div>
+	<div class="menu-sidebar__content js-scrollbar1">
+		<nav class="navbar-sidebar">
+			<ul class="list-unstyled navbar__list {% if request.path == url_for('admin') %}active{% endif %}">
+				<li class="has-sub">
+					<a class="js-arrow" href="{{ url_for('admin')}}">
+						<i class="fas fa-tachometer-alt"></i>Bài viết</a>
+				   
+				</li>
+			</ul>
+
+			<ul class="list-unstyled navbar__list {% if request.path == url_for('dashboard_hot') %}active{% endif %}">
+				<li class="has-sub">
+					<a class="js-arrow" href="{{ url_for('dashboard_hot')}}">
+						<i class="fas fa-tachometer-alt"></i>Bài HOT</a>
+				   
+				</li>
+			   
+			</ul>
+
+			<!-- <ul class="list-unstyled navbar__list">
+				<li class="has-sub">
+					<a class="js-arrow" href="#">
+						<i class="fas fa-tachometer-alt"></i>Bài nổi bật</a>
+				   
+				</li>
+			   
+			</ul>
+
+			<ul class="list-unstyled navbar__list">
+				<li class="has-sub">
+					<a class="js-arrow" href="#">
+						<i class="fas fa-tachometer-alt"></i>Bài kiến thức</a>
+				   
+				</li>
+			   
+			</ul>
+
+			<ul class="list-unstyled navbar__list">
+				<li class="has-sub">
+					<a class="js-arrow" href="#">
+						<i class="fas fa-tachometer-alt"></i>Bài airdrop</a>
+				   
+				</li>
+			   
+			</ul>
+
+			<ul class="list-unstyled navbar__list">
+				<li class="has-sub">
+					<a class="js-arrow" href="#">
+						<i class="fas fa-tachometer-alt"></i>Bài hướng dẫn</a>
+				   
+				</li>
+			   
+			</ul> -->
+		</nav>
+	</div>
+</aside>

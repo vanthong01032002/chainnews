@@ -1,0 +1,105 @@
+{% extends 'user/layouts.html' %}
+{% block content %}
+
+<div class="td-category-header td-container-wrap">
+    <div class="td-container">
+        <div class="td-pb-row">
+            <div class="td-pb-span12">
+                <div class="td-crumb-container"><div class="entry-crumbs"><span><a title="" class="entry-crumb" href="{{ url_for('Home') }}">Trang chủ</a></span> <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i> <span class="td-bred-no-url-last">Kiến Thức</span></div></div>
+
+                    <h1 class="entry-title td-page-title">KIẾN THỨC</h1>
+                    
+            </div>
+        </div>
+        <div class="td-category-pulldown-filter td-wrapper-pulldown-filter" style = "width: 113px;">
+            <div class="td-pulldown-filter-display-option" style = "padding-left: 28px;">
+                    <div class="td-subcat-more">Cypto <i class="td-icon-menu-down" style = "padding-left: 25px;"></i></div>
+                    <ul class="td-pulldown-filter-list">
+                            <li class="td-pulldown-filter-item"><a class="td-pulldown-category-filter-link"
+                                            id="td_uid_34_658d7dbdc28ea" data-td_block_id="td_uid_33_658d7dbdc28e1"
+                                            href="{{ url_for('Portal') }}">Đầu Tư</a></li>
+                            <li class="td-pulldown-filter-item"><a class="td-pulldown-category-filter-link"
+                                            id="td_uid_35_658d7dbdc28ef" data-td_block_id="td_uid_33_658d7dbdc28e1"
+                                            href="{{ url_for('Portal') }}">Phân Tích Kỹ Thuật</a></li>
+                          
+                    </ul>
+            </div>
+    </div>
+    </div>
+</div>
+
+
+
+<div class="td-main-content-wrap td-container-wrap" style = "padding-top: 20px;">
+    <div class="td-container">
+
+        <!-- content -->
+        <div class="td-pb-row">
+            <div class="td-pb-span12 td-main-content">
+                <div class="td-ss-main-content">
+
+                    {% for portal in portals %}
+
+                    <div class="td_module_11 td_module_wrap td-animation-stack">
+                        <div class="td-module-thumb">
+                            {% set encoded_id = portal[0] | b64encode | urlencode %}
+                            <a
+                            href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                rel="bookmark" class="td-image-wrap"
+                                title="{{ portal[1] }}"><img
+                                    class="entry-thumb custom-img-class"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUQAAADrAQMAAAArGX0KAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAACBJREFUaN7twTEBAAAAwiD7pzbEXmAAAAAAAAAAAACQHSaOAAGSp1GBAAAAAElFTkSuQmCC"
+                                    alt=""
+                                    title="{{ portal[1] }}"
+                                    data-type="image_tag"
+                                    data-img-url="{{ portal[3] }}"></a></div>
+                                    <style>
+                                        .custom-img-class {
+                                            width: 318px;
+                                            height:200px;
+                                            object-fit: cover;
+                                        }
+                                        @media (max-width: 767px) {
+                                            .custom-img-class {
+                                                width: 100%; /* Chiều rộng tối đa trên màn hình nhỏ */
+                                                height: 80px;
+                                                object-fit: cover;
+                                            }
+                                        }
+
+                                    </style>
+                        <div class="item-details">
+                            <h3 class="entry-title td-module-title"><a
+                                    href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                    rel="bookmark"
+                                    title="{{ portal[1] }}">
+                                    {{ portal[2] }}</a>
+                            </h3>
+                            <div class="td-module-meta-info">
+                                <span class="td-post-author-name"><a href="/author/{{ portal[4]|replace(' ', '_')|replace('.', '-') }}">{{ portal[4] }}</a>
+                                    <span>-</span> </span> <span class="td-post-date"><time
+                                        class="entry-date updated td-module-date"
+                                        >{{ portal[5] }}</time></span>
+                                <div class="td-module-comments"><a
+                                    href="#" onclick="return false;">{{ portal[7] }}</a>
+                                </div>
+                            </div>
+
+                            <div class="td-excerpt">
+                                {{ portal[9] }}</div>
+                        </div>
+
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+           
+
+         
+        </div> <!-- /.td-pb-row -->
+    </div> <!-- /.td-container -->
+</div> <!-- /.td-main-content-wrap -->
+
+
+{% endblock %}

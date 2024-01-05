@@ -1,0 +1,37 @@
+.active{
+    background-color: rgba(96, 96, 246, 0.357);
+
+    border-radius: 5px; 
+}
+
+.list-unstyled{
+    padding-left: 30px;
+}
+
+.main-content{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+
+  tr:hover {background-color: rgba(121, 118, 117, 0.048);}
+
+.btn-container button {
+    margin-right: 10px;
+}
+
+.img_das{
+
+    width: 70px;
+    height: 55px;
+    border-radius: 5px;
+    object-fit: cover;
+}

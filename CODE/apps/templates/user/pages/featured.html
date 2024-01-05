@@ -1,0 +1,1222 @@
+{% extends 'user/layouts.html' %}
+{% block content %}
+
+<div class="td-category-header td-container-wrap">
+    <div class="td-container">
+        <div class="td-pb-row">
+            <div class="td-pb-span12">
+                <div class="td-crumb-container"><div class="entry-crumbs"><span><a title="" class="entry-crumb" href="{{ url_for('Home') }}">Trang chủ</a></span> <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i> <span class="td-bred-no-url-last">Nổi Bật</span></div></div>
+
+                    <h1 class="entry-title td-page-title">NỔI BẬT</h1>
+                    
+            </div>
+        </div>
+        <div class="td-category-pulldown-filter td-wrapper-pulldown-filter" style = "width: 120px;">
+            <div class="td-pulldown-filter-display-option" style = "padding-left: 30px;">
+                    <div class="td-subcat-more">Mới nhất <i class="td-icon-menu-down" style = "padding-left: 10px;"></i></div>
+                    <ul class="td-pulldown-filter-list">
+                            <li class="td-pulldown-filter-item"><a class="td-pulldown-category-filter-link"
+                                            id="td_uid_34_658d7dbdc28ea" data-td_block_id="td_uid_33_658d7dbdc28e1"
+                                            href="index.html">Mới nhất</a></li>
+                            <li class="td-pulldown-filter-item"><a class="td-pulldown-category-filter-link"
+                                            id="td_uid_35_658d7dbdc28ef" data-td_block_id="td_uid_33_658d7dbdc28e1"
+                                            href="index6fdd.html?filter_by=featured">Tin tiêu biểu</a></li>
+                            <li class="td-pulldown-filter-item"><a class="td-pulldown-category-filter-link"
+                                            id="td_uid_36_658d7dbdc28f2" data-td_block_id="td_uid_33_658d7dbdc28e1"
+                                            href="index6ca3.html?filter_by=popular">Phổ biến nhất</a></li>
+                            <li class="td-pulldown-filter-item"><a class="td-pulldown-category-filter-link"
+                                            id="td_uid_37_658d7dbdc28f5" data-td_block_id="td_uid_33_658d7dbdc28e1"
+                                            href="indexdcac.html?filter_by=popular7">Xem nhiều theo tuần</a></li>
+                            <li class="td-pulldown-filter-item"><a class="td-pulldown-category-filter-link"
+                                            id="td_uid_38_658d7dbdc28f7" data-td_block_id="td_uid_33_658d7dbdc28e1"
+                                            href="index8dd6.html?filter_by=review_high">Bằng Điểm Đánh Giá</a></li>
+                            <li class="td-pulldown-filter-item"><a class="td-pulldown-category-filter-link"
+                                            id="td_uid_39_658d7dbdc28fa" data-td_block_id="td_uid_33_658d7dbdc28e1"
+                                            href="index5995.html?filter_by=random_posts">Ngẫu nhiên</a></li>
+                    </ul>
+            </div>
+    </div>
+</div>
+
+<div class="td-category-grid td-container-wrap" style = "padding-top: 20px;">
+    <div class="td-container">
+        <div class="td-pb-row">
+            <div class="td-pb-span12">
+                <div class="td_block_wrap td_block_big_grid_3 td_uid_40_658d7dbdc2f77_rand td-grid-style-1 td-hover-1 td-big-grids td-pb-border-top td_block_template_1"
+                    data-td-block-uid="td_uid_40_658d7dbdc2f77">
+                    <div id=td_uid_40_658d7dbdc2f77 class="td_block_inner">
+                        <div class="td-big-grid-wrapper">
+                            <div
+                                class="td_module_mx5 td-animation-stack td-big-grid-post-0 td-big-grid-post td-big-thumb">
+                                <div class="td-module-thumb">
+                                    {% set encoded_id = featureds[0][0] | b64encode | urlencode %}
+                                    <a
+                                    href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                        rel="bookmark" class="td-image-wrap"
+                                        title="{{ featureds[0][1] }}"><img
+                                            class="entry-thumb"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhYAAAHOAQMAAAD+DNJPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAADVJREFUeNrtwQENAAAAwiD7p7bHBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICEA3q4AAGK1CNoAAAAAElFTkSuQmCC"
+                                            alt=""
+                                            title="{{ featureds[0][1] }}"
+                                            data-type="image_tag"
+                                            data-img-url="{{ featureds[0][3] }}"
+                                            width="534" height="400" /></a></div>
+                                <div class="td-meta-info-container">
+                                    <div class="td-meta-align">
+                                        <div class="td-big-grid-meta">
+                                            <h3 class="entry-title td-module-title"><a
+                                                href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                                    rel="bookmark"
+                                                    title="{{ featureds[0][1] }}">{{ featureds[0][1] }}</a></h3>
+                                        </div>
+                                        <div class="td-module-meta-info">
+                                            <span class="td-post-author-name"><a
+                                                href="/author/{{ featureds[0][4]|replace(' ', '_')|replace('.', '-') }}">{{ featureds[0][4] }}</a> <span>-</span>
+                                            </span> <span class="td-post-date"><time
+                                                    class="entry-date updated td-module-date"
+                                                  >{{ featureds[0][5] }}</time></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="td-big-grid-scroll">
+                                <div
+                                    class="td_module_mx11 td-animation-stack td-big-grid-post-1 td-big-grid-post td-medium-thumb">
+                                    <div class="td-module-thumb">
+                                        {% set encoded_id = featureds[1][0] | b64encode | urlencode %}
+                                        <a
+                                        href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                            rel="bookmark" class="td-image-wrap"
+                                            title="{{ featureds[1][1] }}"><img
+                                                class="entry-thumb"
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhUAAAEFAQMAAABuFIc7AAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAACdJREFUeNrtwQENAAAAwiD7p7bHBwwAAAAAAAAAAAAAAAAAAAAAIORFVAABqJvmiQAAAABJRU5ErkJggg=="
+                                                alt=""
+                                                title="{{ featureds[1][1] }}"
+                                                data-type="image_tag"
+                                                data-img-url="{{ featureds[1][3] }}"
+                                                width="464" height="261" /></a></div>
+                                    <div class="td-meta-info-container">
+                                        <div class="td-meta-align">
+                                            <div class="td-big-grid-meta">
+                                                <h3 class="entry-title td-module-title"><a
+                                                    href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                                        rel="bookmark"
+                                                        title="{{ featureds[1][1] }}">{{ featureds[1][1] }}</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div
+                                    class="td_module_mx6 td-animation-stack td-big-grid-post-2 td-big-grid-post td-small-thumb">
+                                    <div class="td-module-thumb">
+                                        {% set encoded_id = featureds[2][0] | b64encode | urlencode %}
+                                        <a
+                                        href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                            rel="bookmark" class="td-image-wrap"
+                                            title="{{ featureds[2][1] }}"><img
+                                                class="entry-thumb"
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQkAAADGAQMAAAD7b+fyAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAAB1JREFUWMPtwQENAAAAwiD7p7bHBwwAAAAAAADSDhsSAAGoWlW2AAAAAElFTkSuQmCC"
+                                                alt=""
+                                                title="{{ featureds[2][1] }}"
+                                                data-type="image_tag"
+                                                data-img-url="{{ featureds[2][3] }}"
+                                                width="265" height="198" /></a></div>
+                                    <div class="td-meta-info-container">
+                                        <div class="td-meta-align">
+                                            <div class="td-big-grid-meta">
+                                                <h3 class="entry-title td-module-title"><a
+                                                    href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                                        rel="bookmark"
+                                                        title="{{ featureds[2][1] }}">{{ featureds[2][1] }}</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div
+                                    class="td_module_mx6 td-animation-stack td-big-grid-post-3 td-big-grid-post td-small-thumb">
+                                    <div class="td-module-thumb">
+                                        {% set encoded_id = featureds[3][0] | b64encode | urlencode %}
+                                        <a
+                                        href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                            rel="bookmark" class="td-image-wrap"
+                                            title="{{ featureds[3][1] }}"><img
+                                                class="entry-thumb"
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQkAAADGAQMAAAD7b+fyAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAAB1JREFUWMPtwQENAAAAwiD7p7bHBwwAAAAAAADSDhsSAAGoWlW2AAAAAElFTkSuQmCC"
+                                                alt=""
+                                                title="{{ featureds[3][1] }}"
+                                                data-type="image_tag"
+                                                data-img-url="{{ featureds[3][3] }}"
+                                                width="265" height="198" /></a></div>
+                                    <div class="td-meta-info-container">
+                                        <div class="td-meta-align">
+                                            <div class="td-big-grid-meta">
+                                                <h3 class="entry-title td-module-title"><a
+                                                    href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                                        rel="bookmark"
+                                                        title="{{ featureds[3][1] }}">{{ featureds[3][1] }}</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div> <!-- ./block -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="td-main-content-wrap td-container-wrap">
+    <div class="td-container">
+
+        <!-- content -->
+        <div class="td-pb-row">
+            <div class="td-pb-span8 td-main-content">
+                {% if featureds %}
+                <div class="td-ss-main-content">
+                    {% for featured in featureds[4:] %}
+                    <div class="td_module_11 td_module_wrap td-animation-stack">
+                        <div class="td-module-thumb">
+                            {% set encoded_id = featured[0] | b64encode | urlencode %}
+                            <a
+                            href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                rel="bookmark" class="td-image-wrap"
+                                title="{{ featured[1] }}"><img
+                                    class="entry-thumb"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUQAAADrAQMAAAArGX0KAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAACBJREFUaN7twTEBAAAAwiD7pzbEXmAAAAAAAAAAAACQHSaOAAGSp1GBAAAAAElFTkSuQmCC"
+                                    alt=""
+                                    title="{{ featured[1] }}"
+                                    data-type="image_tag"
+                                    data-img-url="{{ featured[3] }}"
+                                    width="324" height="222" /></a></div>
+                        <div class="item-details">
+                            <h3 class="entry-title td-module-title"><a
+                                href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                    rel="bookmark"
+                                    title="{{ featured[1] }}">{{ featured[2] }}</a></h3>
+                            <div class="td-module-meta-info">
+                                <span class="td-post-author-name"><a href="/author/{{ featured[4]|replace(' ', '_')|replace('.', '-') }}">{{ featured[4] }}</a>
+                                    <span>-</span> </span> <span class="td-post-date"><time
+                                        class="entry-date updated td-module-date"
+                                        >{{ featured[5] }}</time></span>
+                                <div class="td-module-comments"><a
+                                    href="#" onclick="return false;" >{{ featured[7] }}</a>
+                                </div>
+                            </div>
+
+                            <div class="td-excerpt">
+                                {{ featured[9] }}
+                            </div>
+
+                        </div>
+
+                    </div>
+                    {% endfor %}
+
+                </div>
+                {% else %}
+                    <p style="color: #fff;">Không có bài viết nào</p>
+                {% endif %}
+            </div>
+
+            <div class="td-pb-span4 td-main-sidebar">
+                <div class="td-ss-main-sidebar">
+                
+                    <div class="td_block_wrap td_block_slide td_block_widget td_uid_42_658d7dc085132_rand td-pb-border-top slide1 td_block_template_1"
+                        data-td-block-uid="td_uid_42_658d7dc085132">
+                        <style>
+                            /* custom css */
+                            .td_uid_42_658d7dc085132_rand .td-slide-meta {
+                                max-width: calc(100% + 44px);
+                            }
+
+                            @media (max-width: 767px) {
+                                .td_uid_42_658d7dc085132_rand .td-slide-meta {
+                                    max-width: calc(100% + 24px);
+                                }
+                            }
+
+
+                            .td_uid_42_658d7dc085132_rand .entry-thumb {
+                                background-position: center 50%;
+                            }
+
+                            .td_uid_42_658d7dc085132_rand .slide-meta-cat {
+                                display: inline-block;
+                            }
+
+                            .td_uid_42_658d7dc085132_rand .td-post-author-name {
+                                display: inline-block;
+                            }
+
+                            .td_uid_42_658d7dc085132_rand .td-post-date,
+                            .td_uid_42_658d7dc085132_rand .td-post-author-name span {
+                                display: inline-block;
+                            }
+
+                            .td_uid_42_658d7dc085132_rand .td-post-comments {
+                                display: inline-block;
+                            }
+
+                            .td_uid_42_658d7dc085132_rand .td-slide-nav {
+                                font-size: 55px;
+                            }
+                        </style>
+                        <script>var block_td_uid_42_658d7dc085132 = new tdBlock();
+                            block_td_uid_42_658d7dc085132.id = "td_uid_42_658d7dc085132";
+                            block_td_uid_42_658d7dc085132.atts = '{"custom_title":"","custom_url":"","block_template_id":"","header_color":"#","header_text_color":"#","accent_text_color":"#","autoplay":"","limit":"10","offset":"","el_class":"slide1","post_ids":"","category_id":"","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","sort":"random_posts","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_filter_default_txt":"All","td_ajax_preloading":"","image_size":"td_324x400","meta_info_horiz":"content-horiz-left","meta_info_vert":"content-vert-bottom","title_color":"#","cat_bg":"#","cat_txt":"#","cat_bg_hover":"#","cat_txt_hover":"#","author_txt":"#","author_txt_hover":"#","date_txt":"#","comm_txt":"#","review_stars":"#","nav_icons_color":"#","class":"td_block_widget td_uid_42_658d7dc085132_rand","separator":"","content_width":"","image_alignment":"50","image_height":"","meta_padding":"","art_title_space":"","category_margin":"","category_padding":"","category_radius":"0","show_cat":"inline-block","show_author":"inline-block","show_date":"inline-block","show_com":"inline-block","prev_tdicon":"","next_tdicon":"","nav_icon_size":"55","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","msf_title_font_header":"","msf_title_font_title":"Article title","msf_title_font_settings":"","msf_title_font_family":"","msf_title_font_size":"","msf_title_font_line_height":"","msf_title_font_style":"","msf_title_font_weight":"","msf_title_font_transform":"","msf_title_font_spacing":"","msf_title_":"","msf_cat_font_title":"Article category tag","msf_cat_font_settings":"","msf_cat_font_family":"","msf_cat_font_size":"","msf_cat_font_line_height":"","msf_cat_font_style":"","msf_cat_font_weight":"","msf_cat_font_transform":"","msf_cat_font_spacing":"","msf_cat_":"","msf_meta_font_title":"Article meta info","msf_meta_font_settings":"","msf_meta_font_family":"","msf_meta_font_size":"","msf_meta_font_line_height":"","msf_meta_font_style":"","msf_meta_font_weight":"","msf_meta_font_transform":"","msf_meta_font_spacing":"","msf_meta_":"","color_overlay":"","color_overlay_h":"","css":"","tdc_css":"","td_column_number":1,"ajax_pagination_infinite_stop":"","color_preset":"","ajax_pagination":"","border_top":"","tdc_css_class":"td_uid_42_658d7dc085132_rand","tdc_css_class_style":"td_uid_42_658d7dc085132_rand_style"}';
+                            block_td_uid_42_658d7dc085132.td_column_number = "1";
+                            block_td_uid_42_658d7dc085132.block_type = "td_block_slide";
+                            block_td_uid_42_658d7dc085132.post_count = "10";
+                            block_td_uid_42_658d7dc085132.found_posts = "60";
+                            block_td_uid_42_658d7dc085132.header_color = "#";
+                            block_td_uid_42_658d7dc085132.ajax_pagination_infinite_stop = "";
+                            block_td_uid_42_658d7dc085132.max_num_pages = "6";
+                            tdBlocksArray.push(block_td_uid_42_658d7dc085132);
+                        </script>
+                        <div class="td-block-title-wrap"></div>
+                        <div id=td_uid_42_658d7dc085132 class="td_block_inner">
+                            <div id="td_uid_43_658d7dc0897a7" class="td-theme-slider iosSlider-col-1 td_mod_wrap">
+                                <div class="td-slider ">
+                                    {% for hot in hots %} 
+                                    <div id="td_uid_43_658d7dc0897a7_item_0"
+                                        class="td_module_slide td-animation-stack td-image-gradient">
+                                        <div class="td-module-thumb">
+                                            {% set encoded_id = hot[0] | b64encode | urlencode %}
+                                            <a
+                                            href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                                rel="bookmark" class="td-image-wrap"
+                                                title="{{ hot[1] }}"><span
+                                                    class="entry-thumb td-thumb-css" data-type="css_image"
+                                                    data-img-url="{{ hot[3] }}"></span></a>
+                                        </div>
+                                        <div class="td-slide-meta"><span class="slide-meta-cat"><a
+                                            href="/{{ hot[8] }}">{{ hot[8] }}</a></span>
+                                            <h3 class="entry-title td-module-title"><a
+                                                href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                                    rel="bookmark"
+                                                    title="Điểm lại 5 lần Thanos đại bại trong truyện tranh Marvel">{{ hot[2] }}</a></h3>
+                                            <div class="td-module-meta-info"><span class="td-post-author-name"><a
+                                                href="/author/{{ hot[4]|replace(' ', '_')|replace('.', '-') }}">{{ hot[4] }}</a> <span>-</span>
+                                                </span><span class="td-post-date"><time
+                                                        class="entry-date updated td-module-date">{{ hot[5] }}</time></span>
+                                                <div class="td-post-comments"><i class="td-icon-comments"></i><a
+                                                    href="#" onclick="return false;" >{{ hot[7] }}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div id="td_uid_43_658d7dc0897a7_item_1"
+                                        class="td_module_slide td-animation-stack td-image-gradient">
+                                        <div class="td-module-thumb"><a
+                                                href="../../thang-de-doi-tuyen-cua-levi-ig-danh-tam-ve-toi-viet-nam-tham-du-msi-2019/index.html"
+                                                rel="bookmark" class="td-image-wrap"
+                                                title="Thắng dễ đội tuyển của Levi, IG dành tấm vé tới Việt Nam tham dự MSI 2019"><span
+                                                    class="entry-thumb td-thumb-css" data-type="css_image"
+                                                    data-img-url="https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/msi-324x337.png"></span></a>
+                                        </div>
+                                        <div class="td-slide-meta"><span class="slide-meta-cat"><a
+                                                    href="../esports/index.html">ESPORTS</a></span>
+                                            <h3 class="entry-title td-module-title"><a
+                                                    href="../../thang-de-doi-tuyen-cua-levi-ig-danh-tam-ve-toi-viet-nam-tham-du-msi-2019/index.html"
+                                                    rel="bookmark"
+                                                    title="Thắng dễ đội tuyển của Levi, IG dành tấm vé tới Việt Nam tham dự MSI 2019">Thắng
+                                                    dễ đội tuyển của Levi, IG dành tấm vé tới Việt Nam tham dự MSI
+                                                    2019</a></h3>
+                                            <div class="td-module-meta-info"><span class="td-post-author-name"><a
+                                                        href="../../author/monamedia/index.html">mona</a> <span>-</span>
+                                                </span><span class="td-post-date"><time
+                                                        class="entry-date updated td-module-date"
+                                                        datetime="2019-04-24T06:50:08+00:00">24 Tháng Tư,
+                                                        2019</time></span>
+                                                <div class="td-post-comments"><i class="td-icon-comments"></i><a
+                                                        href="../../thang-de-doi-tuyen-cua-levi-ig-danh-tam-ve-toi-viet-nam-tham-du-msi-2019/index.html#respond">0</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="td_uid_43_658d7dc0897a7_item_2"
+                                        class="td_module_slide td-animation-stack td-image-gradient">
+                                        <div class="td-module-thumb"><a
+                                                href="../../diem-mat-5-cinematic-trailer-duoc-cho-la-hay-nhat-do-blizzard-thuc-hien/index.html"
+                                                rel="bookmark" class="td-image-wrap"
+                                                title="Điểm mặt 5 Cinematic Trailer được cho là hay nhất do Blizzard thực hiện"><span
+                                                    class="entry-thumb td-thumb-css" data-type="css_image"
+                                                    data-img-url="https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/Game8-Cinematic-Trailer-hay-nhat-Blizzard-5-Copy-324x375.jpg"></span></a>
+                                        </div>
+                                        <div class="td-slide-meta"><span class="slide-meta-cat"><a
+                                                    href="../pc-console/index.html">PC/CONSOLE</a></span>
+                                            <h3 class="entry-title td-module-title"><a
+                                                    href="../../diem-mat-5-cinematic-trailer-duoc-cho-la-hay-nhat-do-blizzard-thuc-hien/index.html"
+                                                    rel="bookmark"
+                                                    title="Điểm mặt 5 Cinematic Trailer được cho là hay nhất do Blizzard thực hiện">Điểm
+                                                    mặt 5 Cinematic Trailer được cho là hay nhất do Blizzard thực
+                                                    hiện</a></h3>
+                                            <div class="td-module-meta-info"><span class="td-post-author-name"><a
+                                                        href="../../author/monamedia/index.html">mona</a> <span>-</span>
+                                                </span><span class="td-post-date"><time
+                                                        class="entry-date updated td-module-date"
+                                                        datetime="2019-04-24T07:50:40+00:00">24 Tháng Tư,
+                                                        2019</time></span>
+                                                <div class="td-post-comments"><i class="td-icon-comments"></i><a
+                                                        href="../../diem-mat-5-cinematic-trailer-duoc-cho-la-hay-nhat-do-blizzard-thuc-hien/index.html#respond">0</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="td_uid_43_658d7dc0897a7_item_3"
+                                        class="td_module_slide td-animation-stack td-image-gradient">
+                                        <div class="td-module-thumb"><a
+                                                href="../../saint-seiya-galaxy-spirits-game-ao-giap-vang-chinh-chu-toei-animation-va-masami-kurumada/index.html"
+                                                rel="bookmark" class="td-image-wrap"
+                                                title="Saint Seiya: Galaxy Spirits &#8211; Game Áo Giáp Vàng chính chủ Toei Animation và Masami Kurumada"><span
+                                                    class="entry-thumb td-thumb-css" data-type="css_image"
+                                                    data-img-url="https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/Galaxy-Spirits-Preview-750x392.jpg"></span></a>
+                                        </div>
+                                        <div class="td-slide-meta"><span class="slide-meta-cat"><a
+                                                    href="index.html">GAME MOBILE</a></span>
+                                            <h3 class="entry-title td-module-title"><a
+                                                    href="../../saint-seiya-galaxy-spirits-game-ao-giap-vang-chinh-chu-toei-animation-va-masami-kurumada/index.html"
+                                                    rel="bookmark"
+                                                    title="Saint Seiya: Galaxy Spirits &#8211; Game Áo Giáp Vàng chính chủ Toei Animation và Masami Kurumada">Saint
+                                                    Seiya: Galaxy Spirits &#8211; Game Áo Giáp Vàng chính chủ Toei
+                                                    Animation và Masami Kurumada</a></h3>
+                                            <div class="td-module-meta-info"><span class="td-post-author-name"><a
+                                                        href="../../author/monamedia/index.html">mona</a> <span>-</span>
+                                                </span><span class="td-post-date"><time
+                                                        class="entry-date updated td-module-date"
+                                                        datetime="2019-04-24T03:25:40+00:00">24 Tháng Tư,
+                                                        2019</time></span>
+                                                <div class="td-post-comments"><i class="td-icon-comments"></i><a
+                                                        href="../../saint-seiya-galaxy-spirits-game-ao-giap-vang-chinh-chu-toei-animation-va-masami-kurumada/index.html#respond">0</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="td_uid_43_658d7dc0897a7_item_4"
+                                        class="td_module_slide td-animation-stack td-image-gradient">
+                                        <div class="td-module-thumb"><a
+                                                href="../../pubg-mobile-vua-tung-ban-update-0-12-0-da-xuat-hien-bug-may-bay-bien-mat-game-thu-treo-may-tren-khong-trung/index.html"
+                                                rel="bookmark" class="td-image-wrap"
+                                                title="PUBG Mobile vừa tung bản Update 0.12.0 đã xuất hiện BUG máy bay biến mất, game thủ &#8220;treo máy&#8221; trên không trung"><span
+                                                    class="entry-thumb td-thumb-css" data-type="css_image"
+                                                    data-img-url="https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/pubg-mobile-loi-may-bay-2.jpg"></span></a>
+                                        </div>
+                                        <div class="td-slide-meta"><span class="slide-meta-cat"><a
+                                                    href="index.html">GAME MOBILE</a></span>
+                                            <h3 class="entry-title td-module-title"><a
+                                                    href="../../pubg-mobile-vua-tung-ban-update-0-12-0-da-xuat-hien-bug-may-bay-bien-mat-game-thu-treo-may-tren-khong-trung/index.html"
+                                                    rel="bookmark"
+                                                    title="PUBG Mobile vừa tung bản Update 0.12.0 đã xuất hiện BUG máy bay biến mất, game thủ &#8220;treo máy&#8221; trên không trung">PUBG
+                                                    Mobile vừa tung bản Update 0.12.0 đã xuất hiện BUG máy bay biến mất,
+                                                    game thủ &#8220;treo máy&#8221; trên không trung</a></h3>
+                                            <div class="td-module-meta-info"><span class="td-post-author-name"><a
+                                                        href="../../author/monamedia/index.html">mona</a> <span>-</span>
+                                                </span><span class="td-post-date"><time
+                                                        class="entry-date updated td-module-date"
+                                                        datetime="2019-04-24T03:26:57+00:00">24 Tháng Tư,
+                                                        2019</time></span>
+                                                <div class="td-post-comments"><i class="td-icon-comments"></i><a
+                                                        href="../../pubg-mobile-vua-tung-ban-update-0-12-0-da-xuat-hien-bug-may-bay-bien-mat-game-thu-treo-may-tren-khong-trung/index.html#respond">0</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="td_uid_43_658d7dc0897a7_item_5"
+                                        class="td_module_slide td-animation-stack td-image-gradient">
+                                        <div class="td-module-thumb"><a
+                                                href="../../pubg-mobile-huong-dan-doi-non-la-va-ao-dai-hoan-toan-free/index.html"
+                                                rel="bookmark" class="td-image-wrap"
+                                                title="PUBG Mobile: Hướng dẫn đổi nón lá và áo dài hoàn toàn Free"><span
+                                                    class="entry-thumb td-thumb-css" data-type="css_image"
+                                                    data-img-url="https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/pubg-mobile-1.jpg"></span></a>
+                                        </div>
+                                        <div class="td-slide-meta"><span class="slide-meta-cat"><a
+                                                    href="index.html">GAME MOBILE</a></span>
+                                            <h3 class="entry-title td-module-title"><a
+                                                    href="../../pubg-mobile-huong-dan-doi-non-la-va-ao-dai-hoan-toan-free/index.html"
+                                                    rel="bookmark"
+                                                    title="PUBG Mobile: Hướng dẫn đổi nón lá và áo dài hoàn toàn Free">PUBG
+                                                    Mobile: Hướng dẫn đổi nón lá và áo dài hoàn toàn Free</a></h3>
+                                            <div class="td-module-meta-info"><span class="td-post-author-name"><a
+                                                        href="../../author/monamedia/index.html">mona</a> <span>-</span>
+                                                </span><span class="td-post-date"><time
+                                                        class="entry-date updated td-module-date"
+                                                        datetime="2019-04-24T03:24:26+00:00">24 Tháng Tư,
+                                                        2019</time></span>
+                                                <div class="td-post-comments"><i class="td-icon-comments"></i><a
+                                                        href="../../pubg-mobile-huong-dan-doi-non-la-va-ao-dai-hoan-toan-free/index.html#respond">0</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="td_uid_43_658d7dc0897a7_item_6"
+                                        class="td_module_slide td-animation-stack td-image-gradient">
+                                        <div class="td-module-thumb"><a
+                                                href="../../epic-games-chuan-bi-tang-cuong-tinh-nang-bao-ve-tai-khoan-trong-nam-nay/index.html"
+                                                rel="bookmark" class="td-image-wrap"
+                                                title="Epic Games chuẩn bị tăng cường tính năng bảo vệ tài khoản trong năm nay"><span
+                                                    class="entry-thumb td-thumb-css" data-type="css_image"
+                                                    data-img-url="https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/epic-324x400.jpg"></span></a>
+                                        </div>
+                                        <div class="td-slide-meta"><span class="slide-meta-cat"><a
+                                                    href="../game-online/index.html">GAME ONLINE</a></span>
+                                            <h3 class="entry-title td-module-title"><a
+                                                    href="../../epic-games-chuan-bi-tang-cuong-tinh-nang-bao-ve-tai-khoan-trong-nam-nay/index.html"
+                                                    rel="bookmark"
+                                                    title="Epic Games chuẩn bị tăng cường tính năng bảo vệ tài khoản trong năm nay">Epic
+                                                    Games chuẩn bị tăng cường tính năng bảo vệ tài khoản trong năm
+                                                    nay</a></h3>
+                                            <div class="td-module-meta-info"><span class="td-post-author-name"><a
+                                                        href="../../author/monamedia/index.html">mona</a> <span>-</span>
+                                                </span><span class="td-post-date"><time
+                                                        class="entry-date updated td-module-date"
+                                                        datetime="2019-04-24T06:03:20+00:00">24 Tháng Tư,
+                                                        2019</time></span>
+                                                <div class="td-post-comments"><i class="td-icon-comments"></i><a
+                                                        href="../../epic-games-chuan-bi-tang-cuong-tinh-nang-bao-ve-tai-khoan-trong-nam-nay/index.html#respond">0</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="td_uid_43_658d7dc0897a7_item_7"
+                                        class="td_module_slide td-animation-stack td-image-gradient">
+                                        <div class="td-module-thumb"><a
+                                                href="../../csgo-virtus-pro-lai-co-them-mot-su-thay-doi-ve-mat-nhan-su-truoc-them-cac-mua-giai-moi/index.html"
+                                                rel="bookmark" class="td-image-wrap"
+                                                title="CS:GO: Virtus.pro lại có thêm một sự thay đổi về mặt nhân sự trước thềm các mùa giải mới"><span
+                                                    class="entry-thumb td-thumb-css" data-type="css_image"
+                                                    data-img-url="https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/VP-2-324x400.jpg"></span></a>
+                                        </div>
+                                        <div class="td-slide-meta"><span class="slide-meta-cat"><a
+                                                    href="../pc-console/index.html">PC/CONSOLE</a></span>
+                                            <h3 class="entry-title td-module-title"><a
+                                                    href="../../csgo-virtus-pro-lai-co-them-mot-su-thay-doi-ve-mat-nhan-su-truoc-them-cac-mua-giai-moi/index.html"
+                                                    rel="bookmark"
+                                                    title="CS:GO: Virtus.pro lại có thêm một sự thay đổi về mặt nhân sự trước thềm các mùa giải mới">CS:GO:
+                                                    Virtus.pro lại có thêm một sự thay đổi về mặt nhân sự trước thềm các
+                                                    mùa giải mới</a></h3>
+                                            <div class="td-module-meta-info"><span class="td-post-author-name"><a
+                                                        href="../../author/monamedia/index.html">mona</a> <span>-</span>
+                                                </span><span class="td-post-date"><time
+                                                        class="entry-date updated td-module-date"
+                                                        datetime="2019-04-24T07:49:20+00:00">24 Tháng Tư,
+                                                        2019</time></span>
+                                                <div class="td-post-comments"><i class="td-icon-comments"></i><a
+                                                        href="../../csgo-virtus-pro-lai-co-them-mot-su-thay-doi-ve-mat-nhan-su-truoc-them-cac-mua-giai-moi/index.html#respond">0</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="td_uid_43_658d7dc0897a7_item_8"
+                                        class="td_module_slide td-animation-stack td-image-gradient">
+                                        <div class="td-module-thumb"><a
+                                                href="../../xem-captain-marvel-den-nhung-116-lan-anh-chang-nay-da-pha-ky-luc-the-gioi/index.html"
+                                                rel="bookmark" class="td-image-wrap"
+                                                title="Xem Captain Marvel đến những… 116 lần, anh chàng này đã phá kỷ lục thế giới"><span
+                                                    class="entry-thumb td-thumb-css" data-type="css_image"
+                                                    data-img-url="https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/captain-marvel-116-lan-3-324x400.jpg"></span></a>
+                                        </div>
+                                        <div class="td-slide-meta"><span class="slide-meta-cat"><a
+                                                    href="../phim-anh/index.html">PHIM ẢNH</a></span>
+                                            <h3 class="entry-title td-module-title"><a
+                                                    href="../../xem-captain-marvel-den-nhung-116-lan-anh-chang-nay-da-pha-ky-luc-the-gioi/index.html"
+                                                    rel="bookmark"
+                                                    title="Xem Captain Marvel đến những… 116 lần, anh chàng này đã phá kỷ lục thế giới">Xem
+                                                    Captain Marvel đến những… 116 lần, anh chàng này đã phá kỷ lục thế
+                                                    giới</a></h3>
+                                            <div class="td-module-meta-info"><span class="td-post-author-name"><a
+                                                        href="../../author/monamedia/index.html">mona</a> <span>-</span>
+                                                </span><span class="td-post-date"><time
+                                                        class="entry-date updated td-module-date"
+                                                        datetime="2019-04-24T08:33:27+00:00">24 Tháng Tư,
+                                                        2019</time></span>
+                                                <div class="td-post-comments"><i class="td-icon-comments"></i><a
+                                                        href="../../xem-captain-marvel-den-nhung-116-lan-anh-chang-nay-da-pha-ky-luc-the-gioi/index.html#respond">0</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="td_uid_43_658d7dc0897a7_item_9"
+                                        class="td_module_slide td-animation-stack td-image-gradient">
+                                        <div class="td-module-thumb"><a
+                                                href="../../cuong-battle-royale-trieu-phu-tuyen-nguoi-tham-gia-du-an-sinh-ton-ngoai-doi-thuc/index.html"
+                                                rel="bookmark" class="td-image-wrap"
+                                                title="Cuồng Battle royale, triệu phú tuyển người tham gia dự án sinh tồn ngoài đời thực"><span
+                                                    class="entry-thumb td-thumb-css" data-type="css_image"
+                                                    data-img-url="https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/Game8-ti-phu-mo-battle-royal-ngoai-doi-2-324x399.jpg"></span></a>
+                                        </div>
+                                        <div class="td-slide-meta"><span class="slide-meta-cat"><a
+                                                    href="../pc-console/index.html">PC/CONSOLE</a></span>
+                                            <h3 class="entry-title td-module-title"><a
+                                                    href="../../cuong-battle-royale-trieu-phu-tuyen-nguoi-tham-gia-du-an-sinh-ton-ngoai-doi-thuc/index.html"
+                                                    rel="bookmark"
+                                                    title="Cuồng Battle royale, triệu phú tuyển người tham gia dự án sinh tồn ngoài đời thực">Cuồng
+                                                    Battle royale, triệu phú tuyển người tham gia dự án sinh tồn ngoài
+                                                    đời thực</a></h3>
+                                            <div class="td-module-meta-info"><span class="td-post-author-name"><a
+                                                        href="../../author/monamedia/index.html">mona</a> <span>-</span>
+                                                </span><span class="td-post-date"><time
+                                                        class="entry-date updated td-module-date"
+                                                        datetime="2019-04-24T07:47:38+00:00">24 Tháng Tư,
+                                                        2019</time></span>
+                                                <div class="td-post-comments"><i class="td-icon-comments"></i><a
+                                                        href="../../cuong-battle-royale-trieu-phu-tuyen-nguoi-tham-gia-du-an-sinh-ton-ngoai-doi-thuc/index.html#respond">0</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    {% endfor %}
+                                </div><i class="td-slide-nav td-icon-left prevButton"></i><i
+                                    class="td-slide-nav td-icon-right nextButton"></i>
+                            </div>
+                        </div>
+                    </div> <!-- ./block1 -->
+                    <aside class="td_block_template_1 widget widget_media_image"><img width="300" height="600"
+                            src="../../wp-content/uploads/2019/04/300x600.jpg"
+                            class="image wp-image-85 td-modal-image attachment-full size-full" alt=""
+                            style="max-width: 100%; height: auto;"
+                            srcset="https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/300x600.jpg 300w, https://mauweb.monamedia.net/game8/wp-content/uploads/2019/04/300x600-150x300.jpg 150w"
+                            sizes="(max-width: 300px) 100vw, 300px" /></aside>
+                </div>
+            </div>
+        </div> <!-- /.td-pb-row -->
+    </div> <!-- /.td-container -->
+</div> <!-- /.td-main-content-wrap -->
+
+<script>
+    
+
+		
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_2_658d7dbd91103 .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_2_658d7dbd91103 .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_1_658d7dbd90605 .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_1_658d7dbd90605 .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_7_658d7dbd9c5ea .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_7_658d7dbd9c5ea .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_6_658d7dbd9c317 .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_6_658d7dbd9c317 .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_10_658d7dbd9cbad .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_10_658d7dbd9cbad .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+    
+        /* global jQuery:{} */
+        jQuery(window).load(function () {
+
+            var tdbMenuItem = new tdbMenu.item();
+            tdbMenuItem.blockUid = 'td_uid_23_658d7dbdaceca';
+            tdbMenuItem.jqueryObj = jQuery('.td_uid_23_658d7dbdaceca_rand');
+            tdbMenu.addItem( tdbMenuItem );
+
+                                    tdbMenu.megaMenuFull( tdbMenuItem, false );
+            
+            
+        });
+    
+    
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_13_658d7dbd9ea2c .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_13_658d7dbd9ea2c .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_9_658d7dbd9c9b7 .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_9_658d7dbd9c9b7 .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+    
+        /* global jQuery:{} */
+        jQuery(window).load(function () {
+
+            var tdbMenuItem = new tdbMenu.item();
+            tdbMenuItem.blockUid = 'td_uid_30_658d7dbdbe16d';
+            tdbMenuItem.jqueryObj = jQuery('.td_uid_30_658d7dbdbe16d_rand');
+            tdbMenu.addItem( tdbMenuItem );
+
+                                    tdbMenu.megaMenuFull( tdbMenuItem, false );
+            
+            
+        });
+    
+    
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_17_658d7dbdafeed .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_17_658d7dbdafeed .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_16_658d7dbdafc43 .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_16_658d7dbdafc43 .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+jQuery().ready(function() {
+var pulldown_size = jQuery(".td-category-pulldown-filter:first").width();
+if (pulldown_size > 113) { jQuery(".td-category-pulldown-filter .td-pulldown-filter-list").css({"min-width": pulldown_size, "border-top": "1px solid #444"}); }
+});
+
+jQuery(document).ready(function() {
+jQuery("#td_uid_43_658d7dc0897a7").iosSlider({
+snapToChildren: true,
+desktopClickDrag: true,
+keyboardControls: false,
+responsiveSlideContainer: true,
+responsiveSlides: true,
+
+
+infiniteSlider: true,
+navPrevSelector: jQuery("#td_uid_43_658d7dc0897a7 .prevButton"),
+navNextSelector: jQuery("#td_uid_43_658d7dc0897a7 .nextButton")
+,
+        //onSliderLoaded : td_resize_normal_slide,
+        //onSliderResize : td_resize_normal_slide_and_update
+});
+});
+
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_20_658d7dc096217 .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_20_658d7dc096217 .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_26_658d7dc0a03f0 .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_26_658d7dc0a03f0 .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+
+
+    jQuery(window).load(function () {
+        jQuery('body').find('#td_uid_19_658d7dc095ee3 .td-element-style').each(function (index, element) {
+            jQuery(element).css('opacity', 1);
+            return;
+        });
+    });
+
+
+
+
+
+    
+
+        jQuery(window).ready(function () {
+
+            // We need timeout because the content must be rendered and interpreted on client
+            setTimeout(function () {
+
+                var $content = jQuery('body').find('#tdc-live-iframe'),
+                    refWindow = undefined;
+
+                if ($content.length) {
+                    $content = $content.contents();
+                    refWindow = document.getElementById('tdc-live-iframe').contentWindow || document.getElementById('tdc-live-iframe').contentDocument;
+
+                } else {
+                    $content = jQuery('body');
+                    refWindow = window;
+                }
+
+                $content.find('#td_uid_19_658d7dc095ee3 .td-element-style').each(function (index, element) {
+                    jQuery(element).css('opacity', 1);
+                    return;
+                });
+            });
+
+        }, 200);
+    
+
+    
+
+
+
+(function(){
+    var html_jquery_obj = jQuery('html');
+
+    if (html_jquery_obj.length && (html_jquery_obj.is('.ie8') || html_jquery_obj.is('.ie9'))) {
+
+        var path = '../../wp-content/themes/Newspaper-child/style.css';
+
+        jQuery.get(path, function(data) {
+
+            var str_split_separator = '#td_css_split_separator';
+            var arr_splits = data.split(str_split_separator);
+            var arr_length = arr_splits.length;
+
+            if (arr_length > 1) {
+
+                var dir_path = '../../wp-content/themes/Newspaper/index.html';
+                var splited_css = '';
+
+                for (var i = 0; i < arr_length; i++) {
+                    if (i > 0) {
+                        arr_splits[i] = str_split_separator + ' ' + arr_splits[i];
+                    }
+                    //jQuery('head').append('<style>' + arr_splits[i] + '</style>');
+
+                    var formated_str = arr_splits[i].replace(/\surl\(\'(?!data\:)/gi, function regex_function(str) {
+                        return ' url(\'' + dir_path + '/' + str.replace(/url\(\'/gi, '').replace(/^\s+|\s+$/gm,'');
+                    });
+
+                    splited_css += "<style>" + formated_str + "</style>";
+                }
+
+                var td_theme_css = jQuery('link#td-theme-css');
+
+                if (td_theme_css.length) {
+                    td_theme_css.after(splited_css);
+                }
+            }
+        });
+    }
+})();
+
+
+
+</script>
+
+{% endblock %}

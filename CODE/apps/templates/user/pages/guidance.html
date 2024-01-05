@@ -1,0 +1,108 @@
+{% extends 'user/layouts.html' %}
+{% block content %}
+
+<div class="td-category-header td-container-wrap">
+    <div class="td-container">
+        <div class="td-pb-row">
+            <div class="td-pb-span12">
+                <div class="td-crumb-container">
+                    <div class="entry-crumbs"><span><a title="" class="entry-crumb" href="{{ url_for('Home') }}">Trang
+                                chủ</a></span> <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i> <span
+                            class="td-bred-no-url-last">Kiến Thức</span></div>
+                </div>
+
+                <h1 class="entry-title td-page-title">HƯỚNG DẪN</h1>
+
+            </div>
+        </div>
+        <div class="td-category-pulldown-filter td-wrapper-pulldown-filter" style="width: 113px;">
+            <div class="td-pulldown-filter-display-option" style="padding-left: 10px;">
+                <div class="td-subcat-more">Sàn Giao Dịch <i class="td-icon-menu-down" style="padding-left: 3px;"></i>
+                </div>
+                <ul class="td-pulldown-filter-list">
+                    <li class="td-pulldown-filter-item"><a class="td-pulldown-category-filter-link"
+                            id="td_uid_34_658d7dbdc28ea" data-td_block_id="td_uid_33_658d7dbdc28e1"
+                            href="{{ url_for('Portal') }}">Lưu Ví Crypto</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="td-main-content-wrap td-container-wrap" style="padding-top: 20px;">
+    <div class="td-container">
+
+        <!-- content -->
+        <div class="td-pb-row">
+            <div class="td-pb-span12 td-main-content">
+                <div class="td-ss-main-content">
+
+                    {% for guidance in guidances %}
+
+                    <div class="td_module_11 td_module_wrap td-animation-stack">
+                        <div class="td-module-thumb">
+                            {% set encoded_id = guidance[0] | b64encode | urlencode %}
+                            <a href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}"
+                                rel="bookmark" class="td-image-wrap" title="{{ guidance[1] }}"><img
+                                    class="entry-thumb custom-img-class"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUQAAADrAQMAAAArGX0KAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAACBJREFUaN7twTEBAAAAwiD7pzbEXmAAAAAAAAAAAACQHSaOAAGSp1GBAAAAAElFTkSuQmCC"
+                                    alt="" title="{{ guidance[1] }}" data-type="image_tag"
+                                    data-img-url="{{ guidance[3] }}"></a></div>
+                        <style>
+                            .custom-img-class {
+                                width: 318px;
+                                height: 200px;
+                                object-fit: cover;
+                            }
+
+                            @media (max-width: 767px) {
+                                .custom-img-class {
+                                    width: 100%;
+                                    /* Chiều rộng tối đa trên màn hình nhỏ */
+                                    height: 80px;
+                                    object-fit: cover;
+                                }
+                            }
+                        </style>
+                        <div class="item-details">
+                            <h3 class="entry-title td-module-title">
+                                {% set encoded_id = guidance[0] | b64encode | urlencode %}
+                                <a
+                                    href="/{{ encoded_id|replace(' ', '_')|replace('.', '-') }}" rel="bookmark"
+                                    title="{{ guidance[1] }}">
+                                    {{ guidance[2] }}</a>
+                            </h3>
+                            <div class="td-module-meta-info">
+                                <span class="td-post-author-name"><a
+                                        href="/author/{{ guidance[4]|replace(' ', '_')|replace('.', '-') }}">{{
+                                        guidance[4] }}</a>
+                                    <span>-</span> </span> <span class="td-post-date"><time
+                                        class="entry-date updated td-module-date">{{
+                                        guidance[5] }}</time></span>
+                                <div class="td-module-comments"><a href="#" onclick="return false;">{{ guidance[7]
+                                        }}</a>
+                                </div>
+                            </div>
+
+                            <div class="td-excerpt">
+                                {{ guidance[9] }}</div>
+                        </div>
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+
+
+
+        </div> <!-- /.td-pb-row -->
+    </div> <!-- /.td-container -->
+</div> <!-- /.td-main-content-wrap -->
+
+
+{% endblock %}
